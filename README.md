@@ -22,6 +22,7 @@ RetroPad is basically a wrapper around the RICHEDIT50W control from the WinAPI. 
 **Important:** Programs using Crinkler can be flagged as a false positive by antivirus, including Windows Defender. You may need to make an antivirus exception folder to build this (especially for 1.0+), or Windows may delete the EXE as soon as the build completes. Therefore, try this out AT YOUR OWN RISK - NO WARRANTIES / NO GUARANTEES. You can accomplish this with PowerShell, but I am not going to tell you how. Sorry. You're on your own when messing with antivirus.
 
 - MASM version used: Microsoft (R) Macro Assembler Version 14.44.35224.0
+
 - MASM can vary depending on version. If you experience:
 
   ```console
@@ -29,30 +30,31 @@ RetroPad is basically a wrapper around the RICHEDIT50W control from the WinAPI. 
   C:\masm32\include\winextra.inc(11053) : error A2026:constant expected
   ```
 
-In masm32\include\winextra.inc change:
+  In masm32\include\winextra.inc change:
 
-```assembly
-    STD_ALERT struct
-        alrt_timestamp dd ?
-        alrt_eventname WCHAR  [EVLEN + 1] dup(?)
-        alrt_servicename WCHAR [SNLEN + 1] dup(?)
-    STD_ALERT ends
-```
+  ```assembly
+      STD_ALERT struct
+          alrt_timestamp dd ?
+          alrt_eventname WCHAR  [EVLEN + 1] dup(?)
+          alrt_servicename WCHAR [SNLEN + 1] dup(?)
+      STD_ALERT ends
+  ```
 
-to:
+  to:
 
-```assembly
-    STD_ALERT struct
-        alrt_timestamp dd ?
-        alrt_eventname WCHAR  (EVLEN + 1) dup(?)
-        alrt_servicename WCHAR (SNLEN + 1) dup(?)
-    STD_ALERT ends
-```
+  ```assembly
+      STD_ALERT struct
+          alrt_timestamp dd ?
+          alrt_eventname WCHAR  (EVLEN + 1) dup(?)
+          alrt_servicename WCHAR (SNLEN + 1) dup(?)
+      STD_ALERT ends
+  ```
 
-The brackets on lines 13,14 were changed to parens.
+  The brackets on lines 13,14 were changed to parens.
 
 - `build.bat` contains: /LIBPATH:"C:\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.20348.0\\um\\x86"
   You may need to change to fit your system: /LIBPATH:"...\\Windows Kits\\10\\Lib\\(your version)\\um\\x86"
+
 - You need to have Crinkler installed in a directory that has been added to PATH.
   Example: C:\utils\Crinkler.exe
 
