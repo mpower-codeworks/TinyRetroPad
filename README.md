@@ -17,7 +17,7 @@ A working, Notepad-style Windows text editor in under 4 KB.
   <a href="https://www.youtube.com/watch?v=OG91c7xsNMc">
     <img src="https://img.youtube.com/vi/OG91c7xsNMc/hqdefault.jpg"
          alt="TinyRetroPad video by Dave Plummer"
-         width="640">
+         width="320">
   </a>
 </p>
 
