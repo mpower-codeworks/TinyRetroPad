@@ -32,7 +32,9 @@ Stabilize horiz scrollbar - 13 bytes<br>
 Added Dark Mode to match system - 407 bytes<br>
 Fixed blank startup dirty flag - 2 bytes<br>
 Fixed startup editor focus - minus 7 bytes<br>
-Fixed Crinkler RAM 500MB with /HASHSIZE:8 - 98 bytes
+Fixed massive 500MB ram grab by crinker - exe size now 2909 bytes<br>
+Fixed startup focus - 15 bytes<br>
+Added registry font state save/load - 922 bytes (gotta have it)
 
 TinyRetroPad is basically a wrapper around the RICHEDIT50W control from the WinAPI. DTE versions 1.0+ used the EDIT control with Crinkler cranked and were built up from tiny.asm, then worked down to 890 bytes with Win Defender quite unhappy. Versions 2.0+ backed Crinkler off a bit and use RICHEDIT to gain cheaper access to Courier font and much larger files; 2.0+ was worked down from 995 to 981 bytes as a bare editor. TinyRetroPad then grows from that 981-byte base by adding real menus and dialogs — Open/Save/Save As, Print/Page Setup, Find/Replace/Go To, Font, Word Wrap, Time/Date, and a Ln/Col status bar — landing near 2,476 bytes. Each addition was kept as cheap as possible; the growth log at the top of [trpad.asm](trpad.asm) records what every feature cost in bytes.
 
