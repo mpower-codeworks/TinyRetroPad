@@ -13,6 +13,14 @@
 
 A working, Notepad-style Windows text editor in under 4 KB.
 
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=OG91c7xsNMc">
+    <img src="https://img.youtube.com/vi/OG91c7xsNMc/hqdefault.jpg"
+         alt="TinyRetroPad video by Dave Plummer"
+         width="640">
+  </a>
+</p>
+
 ### Update: Leave it to the internet to discover that this exe was grabbing 500 MB of RAM. They were right. The following change to build.bat fixes that: /HASHSIZE:4. 
 
 Compiles with: MASM and Crinkler.
