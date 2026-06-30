@@ -17,6 +17,17 @@ Compiles with: MASM and Crinkler.
 
 TinyRetroPad is a fork of **[Dave's Tiny Editor (DTE)](https://github.com/mpower-codeworks/Daves-Tiny-Editor)** by Matthew Power, which is itself an extension of `tiny.asm` [HelloAssembly](https://github.com/PlummersSoftwareLLC/HelloAssembly) by [Dave Plummer](https://github.com/davepl). The original goal was a working windowed text editor in the sub-1KB category; TinyRetroPad keeps that minimalist, size-obsessed spirit while filling out a full Notepad-style menu set (File / Edit / Format / View / Help) on top of it. It uses [Crinkler](https://github.com/runestubbe/Crinkler) compression at build time.
 
+Recent updates:
+Added dirty file dialog if X clicked - 12 bytes
+Added save failure protection (can't write, etc...) - 14 bytes
+Added save failure popup warning - 8 bytes
+Fixed file dirty flag in title - 7 bytes
+Added horiz scrollbar when word wrap off - 1 byte
+Shorten Format->Word Wrap to "Wrap" - minus 5 bytes
+Add Wrap indicator to status bar - 25 bytes
+Set wrap default to "on" - 9 bytes
+Stabilize horiz scrollbar - 13 bytes
+
 TinyRetroPad is basically a wrapper around the RICHEDIT50W control from the WinAPI. DTE versions 1.0+ used the EDIT control with Crinkler cranked and were built up from tiny.asm, then worked down to 890 bytes with Win Defender quite unhappy. Versions 2.0+ backed Crinkler off a bit and use RICHEDIT to gain cheaper access to Courier font and much larger files; 2.0+ was worked down from 995 to 981 bytes as a bare editor. TinyRetroPad then grows from that 981-byte base by adding real menus and dialogs — Open/Save/Save As, Print/Page Setup, Find/Replace/Go To, Font, Word Wrap, Time/Date, and a Ln/Col status bar — landing near 2,476 bytes. Each addition was kept as cheap as possible; the growth log at the top of [trpad.asm](trpad.asm) records what every feature cost in bytes.
 
 **Important:** Programs using Crinkler can be flagged as a false positive by antivirus, including Windows Defender. You may need to make an antivirus exception folder to build this (especially for 1.0+), or Windows may delete the EXE as soon as the build completes. Therefore, try this out AT YOUR OWN RISK - NO WARRANTIES / NO GUARANTEES. You can accomplish this with PowerShell, but I am not going to tell you how. Sorry. You're on your own when messing with antivirus.
