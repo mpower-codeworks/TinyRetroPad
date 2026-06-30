@@ -76,21 +76,6 @@ TinyRetroPad is basically a wrapper around the RICHEDIT50W control from the WinA
 - You need to have Crinkler installed in a directory that has been added to PATH.
   Example: C:\utils\Crinkler.exe
 
-## Contents
-
-| Folder | Description |
-| - | - |
-| `1_0` | DTE Version 1.0 aggressive 890 bytes build. Needs AV exception to be usable. |
-| `2_0_BACKUPS` | DTE Version 2.0 bare editor, 981 bytes build from RICHEDIT to release. |
-
-| File | Description |
-| - | - |
-| `build.bat` | Builds TinyRetroPad from command line. |
-| `DRAG ME ONTO DTE.txt` | How to use the editor. |
-| `DTE ABOUT.txt` | Explains some design decisions. |
-| `trpad.asm` | The program. TinyRetroPad, forked from DTE 2.0.9 |
-| `LICENSE.TXT` | Usage permissions (Apache License 2.0). |
-
 ## Building the menus and Notepad features
 
 Everything past the bare RICHEDIT wrapper is built up the same way: keep the control doing the heavy lifting, and let the WinAPI common dialogs and a few `SendMessage` calls supply the rest. Almost every "feature" is just a menu ID routed to a one- or two-instruction handler, so the byte cost stays tiny. The
