@@ -29,7 +29,6 @@ Shorten Format->Word Wrap to "Wrap" - minus 5 bytes<br>
 Add Wrap indicator to status bar - 25 bytes<br>
 Set wrap default to "on" - 9 bytes<br>
 Stabilize horiz scrollbar - 13 bytes<br>
-Added Dark Mode to match system - 407 bytes<br>
 Fixed blank startup dirty flag - 2 bytes<br>
 Fixed startup editor focus - minus 7 bytes<br>
 Fixed massive 500MB ram grab by crinker - exe size now 2909 bytes<br>
