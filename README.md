@@ -160,4 +160,4 @@ The status bar is a plain `STATIC` child window created with `CreateWindowExA`. 
 
 ## TinyRetroPad in use
 
-![TinyRetroPad in action](images/dte-in-action.png)
+![TinyRetroPad in action](images/trp-in-action.jpg)
