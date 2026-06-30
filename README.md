@@ -39,7 +39,7 @@ Set wrap default to "on" - 9 bytes<br>
 Stabilize horiz scrollbar - 13 bytes<br>
 Fixed blank startup dirty flag - 2 bytes<br>
 Fixed startup editor focus - minus 7 bytes<br>
-Fixed massive 500MB ram grab by crinker - exe size now 2909 bytes<br>
+Fixed massive 500MB ram grab by Crinkler - exe size now 2909 bytes<br>
 Fixed startup focus - 15 bytes<br>
 Added registry font state save/load - 922 bytes (gotta have it)
 
