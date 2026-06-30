@@ -13,6 +13,8 @@
 
 A working, Notepad-style Windows text editor in roughly 2.5 KB.
 
+### Update: Leave it to the internet to discover that this exe was grabbing 500 MB of RAM. They were right. The following change to build.bat fixes that: /HASHSIZE:8. 
+
 Compiles with: MASM and Crinkler.
 
 TinyRetroPad is a fork of **[Dave's Tiny Editor (DTE)](https://github.com/mpower-codeworks/Daves-Tiny-Editor)** by Matthew Power, which is itself an extension of `tiny.asm` [HelloAssembly](https://github.com/PlummersSoftwareLLC/HelloAssembly) by [Dave Plummer](https://github.com/davepl). The original goal was a working windowed text editor in the sub-1KB category; TinyRetroPad keeps that minimalist, size-obsessed spirit while filling out a full Notepad-style menu set (File / Edit / Format / View / Help) on top of it. It uses [Crinkler](https://github.com/runestubbe/Crinkler) compression at build time.
