@@ -21,7 +21,7 @@ A working, Notepad-style Windows text editor in under 4 KB.
   </a>
 </p>
 
-### Update: Leave it to the internet to discover that this exe was grabbing 500 MB of RAM. They were right. The following change to build.bat fixes that: /HASHSIZE:4. 
+### Update: Leave it to the internet to discover that this exe was grabbing 500 MB of RAM. They were right. The problem actually goes back to DTE. The following change to build.bat fixes that: /HASHSIZE:4. 
 
 Compiles with: MASM and Crinkler.
 
