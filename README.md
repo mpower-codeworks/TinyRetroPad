@@ -11,7 +11,7 @@
 
 # TinyRetroPad
 
-A working, Notepad-style Windows text editor in roughly 2.5 KB.
+A working, Notepad-style Windows text editor in under 4 KB.
 
 ### Update: Leave it to the internet to discover that this exe was grabbing 500 MB of RAM. They were right. The following change to build.bat fixes that: /HASHSIZE:4. 
 
