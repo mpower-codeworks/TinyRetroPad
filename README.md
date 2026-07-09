@@ -27,6 +27,9 @@ Compiles with: MASM and Crinkler.
 TinyRetroPad is a fork of **[Dave's Tiny Editor (DTE)](https://github.com/mpower-codeworks/Daves-Tiny-Editor)**, which is itself an extension of `tiny.asm` [HelloAssembly](https://github.com/PlummersSoftwareLLC/HelloAssembly) by [Dave Plummer](https://github.com/davepl). The original goal was a working windowed text editor in the sub-1KB category; TinyRetroPad keeps that minimalist, size-obsessed spirit while filling out a full Notepad-style menu set (File / Edit / Format / View / Help) on top of it. It uses [Crinkler](https://github.com/runestubbe/Crinkler) compression at build time.
 
 <p align="center">
+  <img src="/images/thm_menu.jpg"
+         alt="Blue Theme"
+         width="200">
   <img src="/images/thm_blu.jpg"
          alt="Blue Theme"
          width="200">
