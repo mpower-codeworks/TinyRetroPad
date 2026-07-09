@@ -40,8 +40,15 @@ TinyRetroPad is a fork of **[Dave's Tiny Editor (DTE)](https://github.com/mpower
          width="175">
 </p>
 
-Recent updates (newest first):<br>
-Added registry font state save/load - 922 bytes (gotta have it)
+## Recent updates (newest first):<br>
+Fixed Z-Order oddity - 32 bytes (now at 3612)<br>
+Added non-minimized insurance (must have) - 32 bytes<br>
+Added registry window-state save/load - 145 bytes<br>
+Fixed trpad z-order on startup - 25 bytes<br>
+Added registry color state save/load - 105 bytes<br>
+....since we already added registry machinery for fonts<br>
+Added color themes blu,blk,norm - 160 bytes (now at 3303)<br>
+Added registry font state save/load - 922 bytes (gotta have it)<br>
 Fixed startup focus - 15 bytes<br>
 Fixed massive 500MB ram grab by Crinkler - exe size now 2909 bytes<br>
 Fixed startup editor focus - minus 7 bytes<br>
