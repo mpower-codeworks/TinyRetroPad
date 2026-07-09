@@ -29,7 +29,7 @@ TinyRetroPad is a fork of **[Dave's Tiny Editor (DTE)](https://github.com/mpower
 <p align="center">
   <img src="/images/thm_menu.jpg"
          alt="Blue Theme"
-         width="200">
+         width="250">
   <img src="/images/thm_blu.jpg"
          alt="Blue Theme"
          width="200">
