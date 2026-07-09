@@ -18,13 +18,22 @@ A working, Notepad-style Windows text editor in under 4 KB.
   <a href="https://www.youtube.com/watch?v=OG91c7xsNMc">
     <img src="https://img.youtube.com/vi/OG91c7xsNMc/hqdefault.jpg"
          alt="TinyRetroPad video by Dave Plummer"
-         width="320">
+         width="300">
   </a>
 </p>
 
 Compiles with: MASM and Crinkler.
 
 TinyRetroPad is a fork of **[Dave's Tiny Editor (DTE)](https://github.com/mpower-codeworks/Daves-Tiny-Editor)**, which is itself an extension of `tiny.asm` [HelloAssembly](https://github.com/PlummersSoftwareLLC/HelloAssembly) by [Dave Plummer](https://github.com/davepl). The original goal was a working windowed text editor in the sub-1KB category; TinyRetroPad keeps that minimalist, size-obsessed spirit while filling out a full Notepad-style menu set (File / Edit / Format / View / Help) on top of it. It uses [Crinkler](https://github.com/runestubbe/Crinkler) compression at build time.
+
+<p align="center">
+  <img src="/images/thm_blu.jpg"
+         alt="Blue Theme"
+         width="200">
+  <img src="/images/thm_gry.jpg"
+         alt="Grey Theme"
+         width="200">
+</p>
 
 Recent updates (newest first):<br>
 Added registry font state save/load - 922 bytes (gotta have it)
