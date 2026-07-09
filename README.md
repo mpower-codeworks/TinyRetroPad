@@ -14,7 +14,7 @@
 
 A working, Notepad-style Windows text editor in under 4 KB.
 
-<p align="center">
+<p align="left">
   <a href="https://www.youtube.com/watch?v=OG91c7xsNMc">
     <img src="https://img.youtube.com/vi/OG91c7xsNMc/hqdefault.jpg"
          alt="TinyRetroPad video by Dave Plummer"
@@ -28,16 +28,16 @@ TinyRetroPad is a fork of **[Dave's Tiny Editor (DTE)](https://github.com/mpower
 
 ## New feature: Color Themes
 
-<p align="center">
+<p align="left">
   <img src="/images/thm_menu.jpg"
          alt="Blue Theme"
-         width="240">
+         width="205">
   <img src="/images/thm_blu.jpg"
          alt="Blue Theme"
-         width="200">
+         width="175">
   <img src="/images/thm_gry.jpg"
          alt="Grey Theme"
-         width="200">
+         width="175">
 </p>
 
 Recent updates (newest first):<br>
