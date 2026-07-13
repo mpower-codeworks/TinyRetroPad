@@ -123,9 +123,6 @@ TinyRetroPad is basically a wrapper around the RICHEDIT50W control from the WinA
 - `build.bat` contains: /LIBPATH:"C:\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.20348.0\\um\\x86"
   You may need to change to fit your system: /LIBPATH:"...\\Windows Kits\\10\\Lib\\(your version)\\um\\x86"
 
-- You need to have Crinkler installed in a directory that has been added to PATH.
-  Example: C:\utils\Crinkler.exe
-
 ## Building the menus and Notepad features
 
 Everything past the bare RICHEDIT wrapper is built up the same way: keep the control doing the heavy lifting, and let the WinAPI common dialogs and a few `SendMessage` calls supply the rest. Almost every "feature" is just a menu ID routed to a one- or two-instruction handler, so the byte cost stays tiny. The
