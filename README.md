@@ -20,6 +20,8 @@ A working, Notepad-style Windows text editor in 16 KB.
          alt="TinyRetroPad video by Dave Plummer"
          width="300">
   </a>
+  
+  This is a fork of the program<br>featured in the above video.
 </p>
 
 Compiles with: MASM. Crinkler support has been dropped. As new features are added, byte-savings are no longer a goal.
