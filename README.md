@@ -12,7 +12,7 @@
 
 # TinyRetroPad
 
-A working, Notepad-style Windows text editor in under 4 KB.
+A working, Notepad-style Windows text editor in 16 KB.
 
 <p align="left">
   <a href="https://www.youtube.com/watch?v=OG91c7xsNMc">
@@ -22,11 +22,25 @@ A working, Notepad-style Windows text editor in under 4 KB.
   </a>
 </p>
 
-Compiles with: MASM and Crinkler.
+Compiles with: MASM. Crinkler support has been dropped. As new features are added, byte-savings are no longer a goal.
 
-This version of TinyRetroPad is a fork of [TinyRetroPad](https://github.com/PlummersSoftwareLLC/TinyRetroPad) which itself is a fork of **[Dave's Tiny Editor (DTE)](https://github.com/mpower-codeworks/Daves-Tiny-Editor)**, which is  an extension of `tiny.asm` [HelloAssembly](https://github.com/PlummersSoftwareLLC/HelloAssembly) by [Dave Plummer](https://github.com/davepl). Got all that? The original goal was a working windowed text editor in the sub-1KB category; TinyRetroPad keeps that minimalist, size-obsessed spirit while filling out a full Notepad-style menu set (File / Edit / Format / View / Help) on top of it. It uses [Crinkler](https://github.com/runestubbe/Crinkler) compression at build time.
+This version of TinyRetroPad is a fork of [TinyRetroPad](https://github.com/PlummersSoftwareLLC/TinyRetroPad) which itself is a fork of **[Dave's Tiny Editor (DTE)](https://github.com/mpower-codeworks/Daves-Tiny-Editor)**, which is  an extension of `tiny.asm` [HelloAssembly](https://github.com/PlummersSoftwareLLC/HelloAssembly) by [Dave Plummer](https://github.com/davepl). Got all that? The original goal was a working windowed text editor in the sub-1KB category; TinyRetroPad keeps that minimalist, size-obsessed spirit while filling out a full Notepad-style menu set (File / Edit / Format / View / Help) on top of it. It formerly used [Crinkler](https://github.com/runestubbe/Crinkler) compression at build time.
 
-## New feature: Color Themes
+## Newly added feature: Dark Mode
+
+<p align="left">
+  <img src="/images/dm_ex_1.png"
+         alt="dm_ex_1"
+         width="205">
+  <img src="/images/lm_ex_1.png"
+         alt="lm_ex_1"
+         width="205">
+  <img src="/images/dm_ex_2.png"
+         alt="Grey Theme"
+         width="205">
+</p>
+
+## Previously added feature: Color Themes
 
 <p align="left">
   <img src="/images/thm_menu.jpg"
@@ -41,6 +55,16 @@ This version of TinyRetroPad is a fork of [TinyRetroPad](https://github.com/Plum
 </p>
 
 ## Recent updates (newest first):<br>
+Fixed repainting when any dialog opened
+Added Ctrl-S and Crtl-O save/open keys<br>
+Fixed scroll bars dark/light mode<br>
+Added dark/light Rich Edit scrollbars<br>
+Fixed the native menu bar bottom line on every NC repaint<br>
+Add registry save dark/light window mode<br>
+Fixed up the menu bar<br>
+Add dark / light mode toggle<br>
+Add dark mode - not measuring bytes anymore / no crinkler<br>
+;; dropping crinkler support ;;<br>
 Fixed Z-Order oddity - 32 bytes (now at 3612)<br>
 Added non-minimized insurance (must have) - 32 bytes<br>
 Added registry window-state save/load - 145 bytes<br>
@@ -64,8 +88,6 @@ Added save failure protection (can't write, etc...) - 14 bytes<br>
 Added dirty file dialog if X clicked - 12 bytes<br>
 
 TinyRetroPad is basically a wrapper around the RICHEDIT50W control from the WinAPI. DTE versions 1.0+ used the EDIT control with Crinkler cranked and were built up from tiny.asm, then worked down to 890 bytes with Win Defender quite unhappy. Versions 2.0+ backed Crinkler off a bit and use RICHEDIT to gain cheaper access to Courier font and much larger files; 2.0+ was worked down from 995 to 981 bytes as a bare editor. TinyRetroPad then grows from that 981-byte base by adding real menus and dialogs — Open/Save/Save As, Print/Page Setup, Find/Replace/Go To, Font, Word Wrap, Time/Date, and a Ln/Col status bar — landing near 2,476 bytes. Each addition was kept as cheap as possible; the growth log at the top of [trpad.asm](trpad.asm) records what every feature cost in bytes.
-
-**Important:** Programs using Crinkler can be flagged as a false positive by antivirus, including Windows Defender. You may need to make an antivirus exception folder to build this, or Windows may delete the EXE as soon as the build completes. Therefore, try this out AT YOUR OWN RISK - NO WARRANTIES / NO GUARANTEES. You can accomplish this with PowerShell.
 
 - MASM version used: Microsoft (R) Macro Assembler Version 14.44.35224.0
 
