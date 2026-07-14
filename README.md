@@ -60,7 +60,7 @@ This version of TinyRetroPad is a fork of [TinyRetroPad](https://github.com/Plum
 </p>
 
 ## Recent updates (newest first):<br>
-Fixed repainting when any dialog opened
+Fixed repainting when any dialog opened<br>
 Added Ctrl-S and Ctrl-O save/open keys<br>
 Fixed scroll bars dark/light mode<br>
 Added dark/light Rich Edit scrollbars<br>
